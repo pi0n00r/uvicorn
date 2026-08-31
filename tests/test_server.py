@@ -155,7 +155,7 @@ async def test_request_than_limit_max_requests_warn_log(
 async def test_dual_stack_server_accepts_ipv4_on_ipv6_socket(unused_tcp_port: int):
     config = Config(app=app, host="::", port=unused_tcp_port, loop="asyncio", dual_stack=True)
     async with run_server(config):
-        async with httpx.AsyncClient() as client:
+        async with httpx2.AsyncClient() as client:
             ipv4_response = await client.get(f"http://127.0.0.1:{unused_tcp_port}")
             ipv6_response = await client.get(f"http://[::1]:{unused_tcp_port}")
 
