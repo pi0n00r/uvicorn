@@ -93,7 +93,7 @@ uvicorn = "uvicorn.main:main"
 Changelog = "https://uvicorn.dev/release-notes"
 Funding = "https://github.com/sponsors/Kludex"
 Homepage = "https://uvicorn.dev/"
-Source = "https://github.com/Kludex/uvicorn"
+Source = "https://github.com/pi0n00r/uvicorn"
 
 [tool.hatch.version]
 path = "uvicorn/__init__.py"

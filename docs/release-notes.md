@@ -2,6 +2,17 @@
 toc_depth: 2
 ---
 
+## 0.54.0+pi0n00r.1 (November 4, 2026)
+
+Fork release based on upstream Uvicorn 0.54.0 plus upstream changes through
+`a99c1b76ee9caea67ff98e2ccc457bd372db193f`.
+
+* Add opt-in `--dual-stack` support for IPv6 listeners, allowing them to accept
+  IPv4-mapped connections on supported platforms.
+* Preserve the upstream single-stack default unless `--dual-stack` is selected.
+* Fail startup explicitly when dual-stack IPv6 sockets are unavailable.
+* Expose the same behavior through the CLI, `uvicorn.run()`, and `Config` APIs.
+
 ## 0.54.0 (September 24, 2026)
 
 HTTP/2 support remains experimental. Install `zttp>=0.0.34` and enable it with `--http zttp --http2`.
